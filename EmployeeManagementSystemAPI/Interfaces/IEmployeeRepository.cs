@@ -4,10 +4,10 @@ namespace EmployeeManagementAPI.Services
 {
     public interface IEmployeeRepository
     {
-        List<Employee> GetAllEmployees();
-        Employee GetEmployeeById(int id);
-        void AddEmployee(Employee employee);
-        void UpdateEmployee(Employee employee);
-        void DeleteEmployee(int id);
+        Task<IEnumerable<Employee>> GetAllEmployees();
+        Task<Employee> GetEmployeeById(int id);
+        Task AddEmployee(Employee employee);
+        Task UpdateEmployee(Employee employee);
+        Task DeleteEmployee(int id);         
     }
 }
